@@ -1,8 +1,10 @@
 import {db,collection,getDocs} from "./firebase.js";
 
-async function buscar(){
+function buscar(){
 
-let contenedor = document.getElementById("resultados");
+document.getElementById("resultados").innerText="La app funciona correctamente";
+
+}
 
 contenedor.innerHTML="Cargando...";
 
