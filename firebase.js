@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
+  apiKey: "AIzaSyBphY_jaOOOVOzwzfoXE78_iDVOQYRhA2o",
+  authDomain: "control-de-gastos-39154.firebaseapp.com",
+  projectId: "control-de-gastos-39154",
+  storageBucket: "control-de-gastos-39154.firebasestorage.app",
+  messagingSenderId: "845236944662",
+  appId: "1:845236944662:web:897201644eaf708afd5a37"
 };
 
 const app = initializeApp(firebaseConfig);
