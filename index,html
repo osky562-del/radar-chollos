@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Chollos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
-<h1>🚀 Radar Chollos</h1>
+<h1>🚀 Radar de Reventa</h1>
 
-<button onclick="test()">Probar app</button>
+<input id="producto" placeholder="Buscar producto">
 
-<div id="resultado"></div>
+<button onclick="buscar()">Buscar</button>
 
-<script>
+<div id="resultados"></div>
 
-function test(){
-
-document.getElementById("resultado").innerText="La app funciona";
-
-}
-
-</script>
+<script src="app.js"></script>
 
 </body>
 
