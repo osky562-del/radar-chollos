@@ -1,27 +1,21 @@
-const productos = require("./scanner")
+import { productos } from "./scanner.js";
+import { db, collection, addDoc } from "./firebase.js";
 
-function buscarChollos(){
+export async function generarChollos() {
+  for (const p of productos) {
+    const precioCompra = Math.floor(Math.random()*80)+40;
+    const precioVenta = Math.floor(Math.random()*200)+120;
+    const beneficio = precioVenta - precioCompra;
 
-productos.forEach(producto => {
-
-let precioCompra = Math.floor(Math.random()*80)+40
-let precioVenta = Math.floor(Math.random()*200)+120
-
-let beneficio = precioVenta - precioCompra
-
-if(beneficio > 40){
-
-console.log("🔥 CHOLLO DETECTADO")
-
-console.log(producto)
-console.log("Compra:",precioCompra)
-console.log("Venta:",precioVenta)
-console.log("Beneficio:",beneficio)
-
+    if (beneficio > 40) {
+      await addDoc(collection(db, "chollos"), {
+        producto: p,
+        precioCompra,
+        precioVenta,
+        beneficio,
+        fecha: new Date()
+      });
+      console.log("Chollo añadido:", p, "Beneficio:", beneficio);
+    }
+  }
 }
-
-})
-
-}
-
-module.exports = buscarChollos
